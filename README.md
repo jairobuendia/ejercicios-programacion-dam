@@ -3,3 +3,6 @@ En este repositorio se guardaran los ejercicios realizado por Jairo Buendía en 
 
 ## Ejercicios PSeInt
 Ejercicios de programación básica en **PSeInt**.
+
+## Ejercicios JAVA
+Ejercicios de programación básica en **Java**.
