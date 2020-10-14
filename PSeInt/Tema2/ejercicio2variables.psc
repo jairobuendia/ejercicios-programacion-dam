@@ -1,5 +1,5 @@
 Algoritmo ejercicio2variables
 	Definir nombre Como Caracter;
-	nombre <- "Adrian Egea Hermoso";
+	nombre <- "Jairo Buendia";
 	Escribir "nombre: ", nombre;
 FinAlgoritmo
