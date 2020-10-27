@@ -15,15 +15,16 @@ public class ejercicio4T4 {
     
     int numHoras = Integer.parseInt( linea );
     
+    
     if (numHoras <= 40) {
       int sueldo = numHoras * 12 ;
-      System.out.println("El sueldo semanal del trabajdor es de " + sueldo + " euros.");
+      System.out.println("El sueldo semanal del trabajador es de " + sueldo + " euros.");
       
     }
     
     if (numHoras >= 41) {
-      int sueldo = numHoras * 16 ;
-      System.out.println("El sueldo semanal del trabajdor es de " + sueldo + " euros.");
+      int sueldo = ( 40 * 12 ) + ((numHoras - 40) * 16)   ;
+      System.out.println("El sueldo semanal del trabajador es de " + sueldo + " euros.");
       
     }
       

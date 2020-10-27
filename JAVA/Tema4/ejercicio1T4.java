@@ -8,11 +8,11 @@ public class ejercicio1T4 {
     
     System.out.print("Indica un día de la semana lectivo: ");
     
-    String opcion = System.console().readLine();
+    String dia = System.console().readLine();
     
-    opcion = opcion.toLowerCase();
+    dia = dia.toLowerCase();
     
-    switch (opcion) {
+    switch (dia) {
      
      case "lunes" :
       System.out.println("Entorno de desarrollo :/ ");
@@ -22,7 +22,7 @@ public class ejercicio1T4 {
       System.out.println("Programación :) ");
       break;
       
-     case "miercoles" :
+     case "miercoles" , "miércoles" :
       System.out.println("Programación :) ");
       break;
       
