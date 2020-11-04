@@ -5,7 +5,7 @@
 public class ejercicio4T5 { 
   public static void main(String[] args) {
     
-    for (int num = 320; num > 140 ; num = num - 20 ) {
+    for (int num = 320; num >= 160 ; num -= 20 ) {
       System.out.println(num);
     }
   }

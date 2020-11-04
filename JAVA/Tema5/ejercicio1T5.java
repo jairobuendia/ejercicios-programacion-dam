@@ -5,7 +5,7 @@
 public class ejercicio1T5 { 
   public static void main(String[] args) {
     
-    for (int num = 5; num < 105 ; num = num + 5 ) {
+    for (int num = 0; num < 105 ; num = num + 5 ) {
       System.out.println(num);
     }
   }
