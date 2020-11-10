@@ -19,8 +19,8 @@ public class ejercicio12T5 {
   public static void main(String[] args) {
     Scanner s = new Scanner(System.in);
     System.out.println("Introduce el número que quieres que se calcule la serie Fibonacci: ");
-    double num;
-    num = s.nextDouble();
+    int num;
+    num = s.nextInt();
     
     int num1 = 0;
     int num2 = 1;
@@ -32,7 +32,9 @@ public class ejercicio12T5 {
       System.out.println("0");
     } else if ( num == 2 ){
       System.out.println("0 1");
-    }
+    } else {
+      
+    
     
     System.out.print("0 1 ");
     
@@ -43,6 +45,7 @@ public class ejercicio12T5 {
       num2 = numt;
       numt = num1 + num2;
       
+      }
     }
   }
   
