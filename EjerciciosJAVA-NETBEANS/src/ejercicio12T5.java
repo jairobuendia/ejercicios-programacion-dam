@@ -18,25 +18,30 @@ public class ejercicio12T5 {
    */
   public static void main(String[] args) {
     Scanner s = new Scanner(System.in);
-    System.out.println("Introduce hasta el número que quieres que se calcule la serie Fibonacci: ");
+    System.out.println("Introduce el número que quieres que se calcule la serie Fibonacci: ");
     double num;
     num = s.nextDouble();
     
-    Double num1 = 0.00;
-    Double num2 = 1.00;
-    Double numt;
+    int num1 = 0;
+    int num2 = 1;
+    int numt = 1;
     
-    while (true) { 
+    if ( num <= 0 ){
+      System.out.println("El dato introducido no es correcto.");
+    } else if ( num == 1){
+      System.out.println("0");
+    } else if ( num == 2 ){
+      System.out.println("0 1");
+    }
+    
+    System.out.print("0 1 ");
+    
+    for (int i = 3; i <= num; i++) {
       
-      
-      
-      numt = num1 + num 2;
-      
-      
-      
-      
-      
-      
+      System.out.print( numt +" ");
+      num1 = num2;
+      num2 = numt;
+      numt = num1 + num2;
       
     }
   }
