@@ -33,17 +33,15 @@ public class ejercicio12T5 {
     } else if ( num == 2 ){
       System.out.println("0 1");
     } else {
+     
+      System.out.print("0 1 ");
+    
+      for (int i = 3; i <= num; i++) {
       
-    
-    
-    System.out.print("0 1 ");
-    
-    for (int i = 3; i <= num; i++) {
-      
-      System.out.print( numt +" ");
-      num1 = num2;
-      num2 = numt;
-      numt = num1 + num2;
+        System.out.print( numt +" ");
+        num1 = num2;
+        num2 = numt;
+        numt = num1 + num2;
       
       }
     }
