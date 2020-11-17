@@ -19,23 +19,23 @@ public class ejercicio14T5 {
   public static void main(String[] args) {
     Scanner s = new Scanner(System.in);
     System.out.println("Introduzca la base: ");
-    int base;
-    base = s.nextInt();
+  
+    int base = Integer.parseInt(s.nextLine());
     
     System.out.println("Introduzca el exponente: ");
-    int expo;
-    expo = s.nextInt();
+    int expo = Integer.parseInt(s.nextLine());
     
     while (expo == 0 || expo < 0) {
       System.out.println("Has introducido un exponente no válido. Tiene que ser entero y positivo.");
       System.out.println("Vuelve a introducirlo de nuevo:");
-      expo = s.nextInt();
+      expo = Integer.parseInt(s.nextLine());
     }
     
-    int resul;
+    int resul = base;
+ 
     
-    for (int i = 0; i > expo; i++) {
-      resul = base * expo;  
+    for (int i = 1; i < expo; i++) {
+      resul = resul * base;
     }
     
     System.out.println("La potencia " + base + "*" + expo + " = " + resul );

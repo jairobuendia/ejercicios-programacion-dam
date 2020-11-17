@@ -18,14 +18,12 @@ public class Ex01jbl1 {
   public static void main(String[] args) {
     Scanner s = new Scanner(System.in);
     System.out.println("Introduze la cantidad de polos que desea: ");
-    int cant;
-    cant = s.nextInt();
+    int cant = Integer.parseInt(s.nextLine());
     System.out.println("Indica el color: \n 1)Blanco \n 2)Otro color ");
-    int color;
-    color = s.nextInt();
+    int color = Integer.parseInt(s.nextLine());
     System.out.println("Indica el tipo: \n 1)Serigrafia \n 2)Bordado ");
-    int tipo;
-    tipo = s.nextInt();
+    int tipo = Integer.parseInt(s.nextLine());
+    
     
     double totalTextil = 0;
     double precioUnitario = 0;
@@ -67,16 +65,16 @@ public class Ex01jbl1 {
     
     System.out.println("PEDIDO POLITOS - PRESUPUESTO");
     System.out.println("----------------------------");
-    System.out.println("Cantidad de polos\t " + cant);
-    System.out.printf("Precio unitario\t\t  %.2f €\n" ,precioUnitario);
-    System.out.printf("Total textil\t\t%.2f €\n" ,totalTextilColor);
-    System.out.printf("Serigrafía (c.u.)\t  %.2f €\n" , serigrafia);
-    System.out.printf("Total serigrafía\t %.2f €\n" , serigrafia * cant);
-    System.out.printf("Polo más serigrafía\t%.2f €\n" , (totalTextilColor + (serigrafia * cant)));
+    System.out.printf("Cantidad de polos       %4d\n" , cant);
+    System.out.printf("Precio unitario         %7.2f €\n" ,precioUnitario);
+    System.out.printf("Total textil            %7.2f €\n" ,totalTextilColor);
+    System.out.printf("Serigrafía (c.u.)       %7.2f €\n" , serigrafia);
+    System.out.printf("Total serigrafía        %7.2f €\n" , serigrafia * cant);
+    System.out.printf("Polo más serigrafía     %7.2f €\n" , (totalTextilColor + (serigrafia * cant)));
     double IVA = 0;
     IVA = 0.21 * (totalTextilColor + (serigrafia * cant));
-    System.out.printf("IVA\t\t\t %.2f €\n" , IVA );
-    System.out.printf("TOTAL\t\t\t%.2f €\n" , (IVA + totalTextilColor + (serigrafia * cant) ));
+    System.out.printf("IVA                     %7.2f €\n" , IVA );
+    System.out.printf("TOTAL                   %7.2f €\n" , (IVA + totalTextilColor + (serigrafia * cant) ));
     
     
      
