@@ -17,7 +17,6 @@ public class Ex02jbl4 {
   public static void main(String[] args) {
     Scanner s = new Scanner(System.in);
     System.out.print("Introduzca un número: ");
-    long num = Long.parseLong(s.nextLine());
     //System.out.println("------------------------");
    
     long num2 = num;
