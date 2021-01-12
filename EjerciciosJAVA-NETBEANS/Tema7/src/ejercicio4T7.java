@@ -26,6 +26,19 @@ public class ejercicio4T7 {
     cuadrado = new int [20]; //se define el array de numeros
     cubo = new int [20]; //se define el array de numeros
     
+    for (int i = 0; i < 20; i++) {
+      num[i]= (int) (Math.random()*100)+1;
+      cuadrado[i]= num[i] * num [i];
+      cubo[i]= num[i] * num[i] * num[i];
+    }
+    System.out.println("------------------------------");
+    System.out.println("NUMERO|CUADRADO|CUBO   |");
+    System.out.println("------------------------------");
+    for (int i = 0; i < 20; i++) {
+      System.out.printf("%6d %8d %7d \n",num[i], cuadrado[i], cubo[i]);
+      
+    }
+    System.out.println("------------------------------");
     
  }
 }
