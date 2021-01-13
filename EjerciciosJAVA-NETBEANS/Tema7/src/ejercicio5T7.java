@@ -25,14 +25,14 @@ public class ejercicio5T7 {
       n[i] = Integer.parseInt(s.nextLine());
       
     }
-    int max = n[1];
+    int max = n[0];
     for (int i : n) {  //bucle que recorre todo el array para sacar el máximo
       if (i > max){
         max = i;
       }
     }
     
-    int min = n[1];
+    int min = n[0];
     for (int i : n) {  //bucle que recorre todo el array para sacar el mínimo
       if (i < min){
         min = i;

@@ -27,26 +27,22 @@ public class ejercicio6T7 {
 //      System.out.print("Número [" + i + "]: ");
 //      num[i] = Integer.parseInt(s.nextLine());
 //    }
-    int almacenar;
-    int almacenar1 = 0;
-    
-    for (int i = 0; i < 14; i++) {
-      almacenar = num [i+1]; // 45 - 21
-      if (num[i] == 0){
-        num[i] = num[i+1];  // 1-23
-      }
-      if (num[i] > 0){
-        num[i+1] = almacenar1;  // 1-23
-      }
-      almacenar1 = almacenar;
-        
-      }
-    
     for (int i : num) {
-      System.out.println(i);
+      System.out.print(i + " ");
       
     }
-      
+    System.out.println("");
+    
+    int ultimo = num[14];
+    
+    for (int i = 14; i > 0; i--) {
+      num[i] = num[i-1];
+    }
+    num[0] = ultimo;
+    for (int i : num) {
+      System.out.print(i + " ");
+    }
+   
   }
    
 }
