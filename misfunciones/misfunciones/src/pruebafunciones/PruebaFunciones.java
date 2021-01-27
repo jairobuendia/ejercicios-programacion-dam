@@ -9,8 +9,7 @@ import misfunciones.Dibujo;
 public class PruebaFunciones {
 
   public static void main(String[] args) {
-    Scanner s = new Scanner(System.in);
-    
+    Scanner s = new Scanner(System.in);  
     System.out.print(Dibujo.linea(8));
     
     System.out.print("Introduzca el primer número: ");
