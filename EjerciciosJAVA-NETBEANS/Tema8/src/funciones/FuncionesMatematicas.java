@@ -259,9 +259,9 @@ public class FuncionesMatematicas {
   
   /**
    * 
-   * @param digito
-   * @param n
-   * @return 
+   * @param digito el cual quieres ver cuantas veces sale
+   * @param n numero en long
+   * @return numero de veces que sale el digito en n
    */
   public static int ocurrenciasInt(int digito, long n){ 
     int contador = 0;
@@ -274,12 +274,55 @@ public class FuncionesMatematicas {
     return contador;
   }
   
-//  public static int ocurrenciasInt(int digito, int n){ 
-//    int contador = 0;
-//    for(int i=0; i<digitos(n); i++){
-//      if(digitoN((long)n, i) == digito) contador++;
-//    }
-//    return contador;
-//  }
+  /**
+   * 
+   * @param min numero minimo en int para el aleatorio
+   * @param max numero maximo en int para el aleatorio
+   * @return un aleatorio entre el min y el max
+   */
+  public static  int aleatorioInt(int min, int max){
+    return (int)(Math.random() * (max + 1 - min) + min);
+  }
   
+  
+  /**
+   * 
+   * @param n el numero en int del cual vamos a quitar los digitos repetidos
+   * @return devuelve un numero en int sin digitos repetidos
+   */
+  public static int quitaRepetidos(int n) {
+		int contador = FuncionesMatematicas.digitos(n);
+		int [] array = new int [contador];
+		int contadorArray = contador;
+		for (int i = contador-1; i >=0; i--) {
+			if(!FuncionesArray.estaEnArrayInt(array,n%10 )) {
+				array[contadorArray-1] = n%10;
+				contadorArray--;
+      }
+			n/=10;
+		}
+		int numeroSinRepetido = 0;
+		for (int i = 0; i < array.length; i++) {
+			numeroSinRepetido = (numeroSinRepetido *10) +  array[i];
+		}
+		return numeroSinRepetido;
+	}
+  
+  /**
+   * 
+   * @param n el numero en long del cual vamos a quitar los digitos repetidos
+   * @return devuelve un numero en long sin digitos repetidos
+   */
+	public static long quitaRepetidos(long n) {
+		return quitaRepetidos((int)n);
+	}
+  
+
+  
+  
+ 
+  
+ 
+  
+ 
 }

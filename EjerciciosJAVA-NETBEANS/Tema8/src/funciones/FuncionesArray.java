@@ -219,4 +219,94 @@ public class FuncionesArray {
     }
     return resultado;
   }
+  
+  //Convierte un string en array diviendolo en carácteres
+  public static String[] extraerStringEnArray(String x){
+    int carac = x.length();
+    String [] array = new String [carac];
+    for (int i = 0; i < carac; i++) {
+      array[i] = "" + x.charAt(i);
+    }
+    return array;
+  }
+  
+  //Elimina  los repetidos en un array "string"
+   public static String[] sinRepetirString(String[] s){
+    boolean comprobar = false;
+    int contador = 0;
+    String[] array = new String[s.length];
+    for(int i=0; i<s.length; i++){
+      comprobar = false;
+      for(int j=0; j<array.length; j++){
+        if(s[i] == array[j]){
+          comprobar = true;
+        }
+      }
+      if(!comprobar) array[contador++] = s[i];
+    }
+    String[] result = new String[contador];
+    for(int i=0; i<contador; i++){
+      result[i] = array[i];
+    }
+    return result;
+  }
+  
+  //PINTA ARRAY CON INDICE BIEN FRESCO
+  public static void pintaArrayConIndice(int arrayEntrada[]) {
+    final int N = arrayEntrada.length;
+    System.out.print("┌────────┬");
+
+    for (int i = 1; i < N; i++) {
+      System.out.print("─────┬");
+    }
+    System.out.print("─────┐\n");
+    System.out.print("│ Índice ");
+    for (int i = 0; i < N; i++) {
+      System.out.printf("│%5d", i);
+    }
+    System.out.println("│");
+    System.out.print("├────────┼");
+    for (int i = 1; i < N; i++) {
+      System.out.print("─────┼");
+    }
+    System.out.print("─────┤\n");
+    System.out.print("│ Valor  ");
+
+    for (int i = 0; i < N; i++) {
+      System.out.printf("│%5d", arrayEntrada[i]);
+    }
+
+    System.out.println("│");
+    System.out.print("└────────┴");
+    for (int i = 1; i < N; i++) {
+      System.out.print("─────┴");
+    }
+    System.out.print("─────┘\n");
+
+  }
+  
+  
+  //AÑADE AL FINAL DE ARRAY EL NUMERO QUE SE INDIQUE
+  public static int[] anidaIntFinalArray(int[]v, int num ){
+    int[] result = new int[v.length + 1];
+    for(int j=0; j<result.length-1; j++){
+      result[j] = v[j];
+    }
+    result[result.length-1] = num;
+    return result;
+  }
+  
+  
+  public static int[] eliminaRepetidosArray(int[] v){
+    int[] result = new int[0];
+    for(int i=0; i<v.length; i++){
+      if(!estaEnArrayInt(result, v[i])){
+        result = anidaIntFinalArray(result, v[i]);
+      }
+    }
+    return result;
+  }
+  
+  
+  
 }

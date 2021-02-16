@@ -51,6 +51,22 @@ public class FuncionesPalabras {
 		return  palabra;     
   }
   
+  public static String sinEspaciosEnBlanco(String input){
+    boolean check = false;
+    int count = 0;
+    String result = "";
+    do{
+      if(input.charAt(count) == ' '){
+        count++;
+      }else{
+        check = true;
+      }
+    }while(count<input.length() && !check);
+    for(int i=count; i<input.length(); i++){
+      result += input.charAt(i);
+    }
+    return result;
+  }
   
   
 }
